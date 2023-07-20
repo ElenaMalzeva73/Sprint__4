@@ -19,29 +19,29 @@ public class MainPage {
     }
 
     public void checkButtonCookies() {
-        this.isDisplayed = this.webDriver.findElement(this.buttonCookies).isDisplayed();
-        Assert.assertTrue(this.isDisplayed);
+        isDisplayed = webDriver.findElement(buttonCookies).isDisplayed();
+        Assert.assertTrue(isDisplayed);
     }
 
     public void clickButtonCookies() {
-        this.webDriver.findElement(this.buttonCookies).click();
+        webDriver.findElement(buttonCookies).click();
     }
 
     public void scrollToButton() {
-        WebElement element = this.webDriver.findElement(this.secondOrderButton);
-        ((JavascriptExecutor)this.webDriver).executeScript("arguments[0].scrollIntoView();", element);
+        WebElement element = webDriver.findElement(secondOrderButton);
+        ((JavascriptExecutor)webDriver).executeScript("arguments[0].scrollIntoView();", element);
     }
 
     public void clickButtonOrder() {
-        this.webDriver.findElement(this.buttonOrder).click();
+        webDriver.findElement(buttonOrder).click();
     }
 
     public void clickSecondOrderButton() {
-        this.webDriver.findElement(this.secondOrderButton).click();
+        webDriver.findElement(secondOrderButton).click();
     }
 
     public void scrollToElement() {
-        WebElement element = this.webDriver.findElement(this.questionsAboutImportant);
-        ((JavascriptExecutor)this.webDriver).executeScript("arguments[0].scrollIntoView();", element);
+        WebElement element = webDriver.findElement(questionsAboutImportant);
+        ((JavascriptExecutor)webDriver).executeScript("arguments[0].scrollIntoView();", element);
     }
 }

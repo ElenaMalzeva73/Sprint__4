@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class forWhomScooterPaje {
+public class ForWhomScooterPaje {
     WebDriver webDriver;
     boolean isDisplayed;
     String nameTest;
@@ -36,7 +36,7 @@ public class forWhomScooterPaje {
     private final By buttonYes = By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM' and text()='Да']");
     private final By fieldOrderIssued = By.xpath("//div[@class='Order_ModalHeader__3FDaJ']");
 
-    public forWhomScooterPaje(WebDriver webDriver, String name, String lastName, String address, String metroStation, String phoneNumber, String rentalDate, String leaseTerm, String colorScooter, String comment) {
+    public ForWhomScooterPaje(WebDriver webDriver, String name, String lastName, String address, String metroStation, String phoneNumber, String rentalDate, String leaseTerm, String colorScooter, String comment) {
         this.webDriver = webDriver;
         this.nameTest = name;
         this.lastName = lastName;
@@ -83,9 +83,13 @@ public class forWhomScooterPaje {
         webDriver.findElement(commentForTheCourier).click();
         webDriver.findElement(commentForTheCourier).sendKeys(commentTest);
         webDriver.findElement(buttonOrderFormAboutRent).click();
+    }
+    public void checFormWantToPlaceAnOrder() {
         isDisplayed = webDriver.findElement(formWantToPlaceAnOrder).isDisplayed();
         Assert.assertTrue(isDisplayed);
         webDriver.findElement(buttonYes).click();
+    }
+    public void checFieldOrderIssued(){
         isDisplayed = webDriver.findElement(fieldOrderIssued).isDisplayed();
         Assert.assertTrue(isDisplayed);
     }
