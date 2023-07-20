@@ -3,11 +3,6 @@ package ScooterTest;
 import ScooterTest.pajeobject.MainPage;
 import ScooterTest.pajeobject.ListOfImportantQuestionsPaje;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-
-
 public class ListOfImportantQuestionsPajeTest extends BasicSetTest {
     MainPage mainPage;
     ListOfImportantQuestionsPaje accordionTest;

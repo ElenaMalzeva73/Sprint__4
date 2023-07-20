@@ -47,20 +47,6 @@ public class ForWhomScooterPajeTest extends BasicSetTest {
         mainPage.checkButtonCookies();
         mainPage.clickButtonCookies();
         mainPage.clickButtonOrder();
-        checkOrderHeader();
-    }
-
-    @Test
-    public void checkSecondOrderButton() {
-        mainPage = new MainPage(webDriver);
-        mainPage.checkButtonCookies();
-        mainPage.clickButtonCookies();
-        mainPage.scrollToButton();
-        mainPage.clickSecondOrderButton();
-        checkOrderHeader();
-    }
-
-    public void checkOrderHeader() {
         ForWhomScooterPaje = new ForWhomScooterPaje(webDriver,name,lastName,address,metroStation,
                 phoneNumber, rentalDate, leaseTerm, colorScooter,comment);
         ForWhomScooterPaje.fillOrderHeader();
@@ -71,4 +57,26 @@ public class ForWhomScooterPajeTest extends BasicSetTest {
         ForWhomScooterPaje.checFormWantToPlaceAnOrder();
         ForWhomScooterPaje.checFieldOrderIssued();
     }
-}
+
+    @Test
+    public void checkSecondOrderButton() {
+        mainPage = new MainPage(webDriver);
+        mainPage.checkButtonCookies();
+        mainPage.clickButtonCookies();
+        mainPage.scrollToButton();
+        mainPage.clickSecondOrderButton();
+            ForWhomScooterPaje = new ForWhomScooterPaje(webDriver,name,lastName,address,metroStation,
+                    phoneNumber, rentalDate, leaseTerm, colorScooter,comment);
+            ForWhomScooterPaje.fillOrderHeader();
+            ForWhomScooterPaje.setStationMetro(metroStation);
+            ForWhomScooterPaje.clickButtonNext();
+            ForWhomScooterPaje.checkFieldProRent();
+            ForWhomScooterPaje.fillFieldWhenBringScooter();
+            ForWhomScooterPaje.checFormWantToPlaceAnOrder();
+            ForWhomScooterPaje.checFieldOrderIssued();
+        }
+
+    }
+
+
+
